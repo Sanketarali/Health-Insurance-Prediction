@@ -32,10 +32,12 @@ data.head()<br>
 
 data.isnull().sum()<br>
 
- <h3>I will replace the values of the “sex” and “smoker” columns with 0 and 1 as both these columns contain string values:<br></h3>
+ <h3>I will replace the values of the “sex” , “smoker” and "region" columns with 0 and 1 as both these columns contain string values:<br></h3>
  
  data["sex"] = data["sex"].map({"female": 0, "male": 1})<br>
 data["smoker"] = data["smoker"].map({"no": 0, "yes": 1})<br>
+data['region']=data['region'].map({'southwest':1,'southeast':2,
+                   'northwest':3,'northeast':4})<br>
 print(data.head())<br>
 
 # Health Insurance Premium Prediction Model
