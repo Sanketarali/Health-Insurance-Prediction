@@ -28,9 +28,13 @@ import pandas as pd<br>
 data = pd.read_csv("Health_insurance.csv")<br>
 data.head()<br>
 
+![result](https://github.com/Sanketarali/Health-Insurance-Prediction/blob/main/Screenshot%20(3009).png)
+
 <h3>Before moving forward, let’s have a look at whether this dataset contains any null values or not:<br></h3>
 
 data.isnull().sum()<br>
+
+![result](https://github.com/Sanketarali/Health-Insurance-Prediction/blob/main/Screenshot%20(3008).png)
 
  <h3>I will replace the values of the “sex” , “smoker” and "region" columns with 0 and 1 as both these columns contain string values:<br></h3>
  
@@ -38,7 +42,9 @@ data.isnull().sum()<br>
 data["smoker"] = data["smoker"].map({"no": 0, "yes": 1})<br>
 data['region']=data['region'].map({'southwest':1,'southeast':2,
                    'northwest':3,'northeast':4})<br>
-print(data.head())<br>
+data.head()<br>
+
+![result](https://github.com/Sanketarali/Health-Insurance-Prediction/blob/main/Screenshot%20(3007).png)
 
 # Health Insurance Premium Prediction Model
 <h3>Now let’s move on to training a machine learning model for the task of predicting health insurance premiums. First, I’ll split the data into training and test sets:<br></h3>
@@ -56,8 +62,6 @@ forest = RandomForestRegressor()<br>
 
 <h3>Now let’s have a look at the predicted values of the model:<br></h3>
 
-model.predict([[40,1,40,4,1,2]])<br>
+![result](https://github.com/Sanketarali/Health-Insurance-Prediction/blob/main/Screenshot%20(3006).png)
 
-# Result
-array([42913.7645062])
-forest.fit(xtrain, ytrain)<br>
+
